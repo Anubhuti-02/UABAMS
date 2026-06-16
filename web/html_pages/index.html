@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RailMonitor - Railway Impact Monitoring System</title>
+<<<<<<< HEAD
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -395,6 +396,11 @@
             }
         }
     </style>
+=======
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages/index.css">
+>>>>>>> stage
 </head>
 <body>
     <!-- Top Menu Bar -->
@@ -402,25 +408,11 @@
         <div class="logo">
             <h1>RailMonitor</h1>
         </div>
-        
         <nav class="main-nav">
             <!-- File Menu -->
             <div class="menu-item dropdown">
-                <button class="menu-btn">
-                    File <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#"><i class="fas fa-file"></i> New Session</a>
-                    <a href="#"><i class="fas fa-folder-open"></i> Open</a>
-                    <a href="#"><i class="fas fa-save"></i> Save</a>
-                    <a href="#"><i class="fas fa-print"></i> Print</a>
-                    <a href="#"><i class="fas fa-sign-out-alt"></i> Exit</a>
-                </div>
-            </div>
-
-            <!-- Dashboard Menu -->
-            <div class="menu-item dropdown">
-                <button class="menu-btn">
+                <button class="menu-btn">File <i class="fas fa-chevron-down"></i></button>
+               <button class="menu-btn">
                     Dashboard <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -428,29 +420,20 @@
                         <i class="fas fa-chart-pie"></i> Management Dashboard
                     </a>
                     <a href="#" onclick="loadPage('pages/operator-dashboard.html')">
-                        <i class="fas fa-desktop"></i> Operator Dashboard
+                       <i class="fas fa-desktop"></i> Operator Dashboard
                     </a>
                 </div>
             </div>
 
             <!-- Session Menu -->
             <div class="menu-item dropdown">
-                <button class="menu-btn">
-                    Session <i class="fas fa-chevron-down"></i>
-                </button>
+               <button class="menu-btn">Session <i class="fas fa-chevron-down"></i></button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="loadPage('pages/events.html')">
+                    <a href="#" onclick="loadPage('html/events.html')">
                         <i class="fas fa-exclamation-triangle"></i> Events
                     </a>
-                    <a href="#" onclick="loadPage('pages/graphs.html')">
-                        <i class="fas fa-chart-bar"></i> Graphs
-                    </a>
-                </div>
-            </div>
-
-            <!-- Systems Menu -->
-            <div class="menu-item dropdown">
-                <button class="menu-btn">
+                    <a href="#" onclick="loadPage('html/graphs.html')">
+               <button class="menu-btn">
                     Systems <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -461,7 +444,7 @@
                         <i class="fas fa-chart-simple"></i> Acceleration Analysis
                     </a>
                     <a href="#" onclick="loadPage('pages/acceleration-km.html')">
-                        <i class="fas fa-ruler"></i> Acceleration KM-wise
+                       <i class="fas fa-ruler"></i> Acceleration KM-wise
                     </a>
                 </div>
             </div>
@@ -478,6 +461,14 @@
 		    <a href="#" onclick="loadPage('pages/sampling-frequency.html')">
 			    <i class="fas fa-wave-square"></i> Sampling Frequency
 		   </a>
+                <button class="menu-btn">Configuration <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="loadPage('html/configuration.html')">
+                        <i class="fas fa-sliders-h"></i> Threshold Configuration
+                    </a>
+                    <a href="#" onclick="loadPage('html/sampling-frequency.html')">
+                        <i class="fas fa-wave-square"></i> Sampling Frequency
+                    </a>
                 </div>
             </div>
         </nav>
@@ -527,6 +518,7 @@
                 <span class="panel-badge">MTJ-AGC UP (26)</span>
             </div>
             
+
             <div class="info-section">
                 <h3><i class="fas fa-train"></i> Train Information</h3>
                 <div class="info-grid">
@@ -600,7 +592,7 @@
         </div>
     </div>
 
-    <script>
+    t <script>
         /**
          * Update accelerometer connection status.
          * Highlights the active state pill and dims the other two.
@@ -684,5 +676,8 @@
             }
         });
     </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/index.js"></script>
 </body>
 </html>
